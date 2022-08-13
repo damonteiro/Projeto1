@@ -2,6 +2,7 @@ package Inicio;
 
 import Inicio.dao.ClienteMapDAO;
 import Inicio.dao.IClienteDAO;
+import Inicio.domain.Cliente;
 
 import javax.swing.*;
 
@@ -25,23 +26,28 @@ public class App {
                     "Green dinner", JOptionPane.INFORMATION_MESSAGE);
         }
 
-//        while (isOpcaoValida(opcao)) {
-//           if (isOpcaoSair(opcao)) {
-//               sair();
-//           }
-//        }
-
-        while (isOpcaoCadastro(opcao)) {
-            if (cadastrar(opcao)) {
+        while (isOpcaoValida(opcao)) {
+            if (isOpcaoSair(opcao)) {
                 sair();
+            } else if (isOpcaoCadastro(opcao)) {
+                String dados = JOptionPane.showInputDialog(null,
+                        "Digite Os dados do Cliente separados por vírgula, conforme exemplo: Nome, CPF, Telefone, Endereço, Numero, Cidade, Estado",
+                        "Cadastro", JOptionPane.INFORMATION_MESSAGE);
+                cadastrar(dados);
             }
         }
+    }
 
-        while (isOpcaoSair(opcao)) {
-             sair(); {
-            }
+    private static void cadastrar(String dados) {
+        String[] dadosSeparados = dados.split(",");
+        Cliente cliente = new Cliente(dadosSeparados[0],dadosSeparados[1],dadosSeparados[2],dadosSeparados[3],dadosSeparados[4],dadosSeparados[5],dadosSeparados[6]);
+    }
+
+    private static boolean isOpcaoCadastro(String opcao) {
+        if ("1".equals(opcao)) {
+            return true;
         }
-
+        return false;
     }
 
     private static boolean isOpcaoValida(String opcao) {
@@ -55,25 +61,14 @@ public class App {
         System.exit(0);
     }
 
-    private static boolean cadastrar(String opcao) {
-        return false;
-    }
-
-    private static boolean isOpcaoCadastro(String opcao) {
-        if ("1".equals(opcao)) {
-            return true;
-        }
-        return false;
-    }
-
     private static boolean isOpcaoSair(String opcao) {
         if ("5".equals(opcao)) {
             JOptionPane.showInputDialog(null, "Até Logo");
             System.exit(0);
+            return true;
         }
         return false;
     }
-
 
 
 }
