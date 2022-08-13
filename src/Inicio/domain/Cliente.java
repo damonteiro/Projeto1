@@ -5,7 +5,7 @@ import java.util.Objects;
 public class Cliente {
 
     private String nome;
-    private Long cpf;
+    private static Long cpf;
     private Long tel;
     private String end;
     private Integer num;
@@ -31,7 +31,7 @@ public class Cliente {
     }
 
     public static Long getCpf() {
-        return getCpf();
+        return cpf;
     }
 
     public void setCpf(Long cpf) {

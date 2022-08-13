@@ -17,11 +17,11 @@ public class ClienteMapDAO implements IClienteDAO {
 
     @Override
     public Boolean cadastrar(Cliente cliente) {
-        if (this.map.containsKey(cliente.getCpf())) {
+        if (map.containsKey(cliente.getCpf())) {
             return false;
         }
         this.map.put(cliente.getCpf(), cliente);
-                return true;
+        return true;
     }
 
     @Override
@@ -48,6 +48,11 @@ public class ClienteMapDAO implements IClienteDAO {
 
     @Override
     public Cliente consulta(Long cpf) {
+        return null;
+    }
+
+    @Override
+    public Cliente consultar(Long cpf) {
         return this.map.get(cpf);
     }
 
