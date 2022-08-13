@@ -56,7 +56,7 @@ public class App {
     }
 
     private static boolean cadastrar(String opcao) {
-        return false;
+        return true;
     }
 
     private static boolean isOpcaoCadastro(String opcao) {
