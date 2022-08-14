@@ -47,11 +47,6 @@ public class ClienteMapDAO implements IClienteDAO {
     }
 
     @Override
-    public Cliente consulta(Long cpf) {
-        return null;
-    }
-
-    @Override
     public Cliente consultar(Long cpf) {
         return this.map.get(cpf);
     }
@@ -60,7 +55,4 @@ public class ClienteMapDAO implements IClienteDAO {
     public Collection<Cliente> buscarTodos() {
         return this.map.values();
     }
-
-
-
 }

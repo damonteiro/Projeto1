@@ -79,10 +79,12 @@ public class Cliente {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Cliente cliente = (Cliente) o;
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null || getClass() != obj.getClass())
+            return false;
+        Cliente cliente = (Cliente) obj;
         return Objects.equals(cpf, cliente.cpf);
     }
 
@@ -93,8 +95,6 @@ public class Cliente {
 
     @Override
     public String toString() {
-        return "Cliente{" +
-                "cpf=" + cpf +
-                '}';
+        return "Nome: " + nome + " " + "CPF: " + cpf;
     }
 }
