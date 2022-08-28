@@ -86,6 +86,21 @@ public class App {
         return "5".equals(opcao);
     }
 
+//    private static boolean cadastrar(String clienteRecebido) {
+//        String[] dadosSeparados = clienteRecebido.split(";\\s");
+//        Cliente cliente = new Cliente(Cliente.getNome(), Cliente.getCpf(),cliente.getTel(),cliente.getEnd(),cliente.getNum(),cliente.getCidade(),cliente.getEstado());
+//        Boolean isCadastrado = iClienteDAO.cadastrar(cliente);
+//        if (isCadastrado) {
+//            JOptionPane.showMessageDialog(null,"Cliente cadastrado com sucesso","Sucesso", JOptionPane.INFORMATION_MESSAGE);
+//            return true;
+//
+//        } else {
+//            JOptionPane.showMessageDialog(null,"Cliente já se encontra cadastrado","ERRO", JOptionPane.INFORMATION_MESSAGE);
+//        }
+//        return false;
+//    }
+
+
                                                                                                                             //Abaixo está a execução do que acontece em cada opção.
 
     private static boolean cadastrar(String dados) {
@@ -126,5 +141,6 @@ public class App {
         JOptionPane.showMessageDialog(null, "Até Logo");
         System.exit(0);
     }
+
 
 }

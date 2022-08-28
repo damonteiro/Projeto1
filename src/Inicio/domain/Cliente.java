@@ -22,7 +22,7 @@ public class Cliente {
         this.estado = estado;
     }
 
-    public String getNome() {
+    public String getNome(int i) {
         return nome;
     }
 
@@ -97,4 +97,5 @@ public class Cliente {
     public String toString() {
         return "Nome: " + nome + " " + "CPF: " + cpf;
     }
+
 }
