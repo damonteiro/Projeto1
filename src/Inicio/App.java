@@ -17,6 +17,7 @@ public class App {
                 "Digite 1 para cadastrar, 2 para consultar, 3 para excluir, 4 para alterar ou 5 para sair",
                 "Green dinner", JOptionPane.INFORMATION_MESSAGE);
 
+
         while (!isOpcaoValida(opcao)) {
             if ("".equals(opcao)) {
                 sair();
